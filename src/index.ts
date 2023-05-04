@@ -1,5 +1,6 @@
 const process_status = document.querySelector("#process_status")as HTMLParagraphElement;
 const current_temperature = document.querySelector("#current_temperature")as HTMLParagraphElement;
+const current_windspeed = document.querySelector("#current_windspeed")as HTMLParagraphElement;
 const button = document.querySelector("#button")as HTMLButtonElement;
 button.addEventListener("click", askWeather);
 function askWeather() {
@@ -11,6 +12,7 @@ function askWeather() {
         navigator.geolocation.getCurrentPosition(success, error);
     }
     function success(position:GeolocationPosition) {
+        process_status.textContent = "";
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         const xhr = new XMLHttpRequest();
@@ -21,7 +23,8 @@ function askWeather() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 const data = xhr.response;
                 console.log(data);
-                current_temperature.textContent = "Current: " + data.current_weather.temperature + " Degrees Celsius";
+                current_temperature.textContent = "Current temperature: " + data.current_weather.temperature + " Degrees Celsius";
+                current_windspeed.textContent = "Current windspeed: " + data.current_weather.windspeed + " km/h";
             } else {
                 console.log(`Error: ${xhr.status}`);
             }
