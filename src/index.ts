@@ -1,8 +1,5 @@
-const process_status = document.querySelector("#process_status")as HTMLParagraphElement;
-const current_temperature = document.querySelector("#current_temperature")as HTMLParagraphElement;
-const current_windspeed = document.querySelector("#current_windspeed")as HTMLParagraphElement;
-const current_winddirection = document.querySelector("#current_winddirection")as HTMLParagraphElement;
-const button = document.querySelector("#button")as HTMLButtonElement;
+import {process_status, current_temperature, current_windspeed, current_winddirection, current_weathercode, button} from './dom_utils';
+
 button.addEventListener("click", askWeather);
 function askWeather() {
 
@@ -26,7 +23,8 @@ function askWeather() {
                 console.log(data);
                 current_temperature.textContent = "Current temperature: " + data.current_weather.temperature + " Degrees Celsius";
                 current_windspeed.textContent = "Current windspeed: " + data.current_weather.windspeed + " km/h";
-                current_winddirection.textContent = "Current winddirection: " + data.current_weather.winddirection + " degrees"
+                current_winddirection.textContent = "Current winddirection: " + data.current_weather.winddirection + " degrees";
+                current_weathercode.textContent = "Current weather: " + data.current_weather.weathercode;
             } else {
                 console.log(`Error: ${xhr.status}`);
             }
