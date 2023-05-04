@@ -1,13 +1,13 @@
-const progress_status = document.querySelector("#status")as HTMLParagraphElement;
-const temperatur = document.querySelector("#temperatur")as HTMLParagraphElement;
+const process_status = document.querySelector("#process_status")as HTMLParagraphElement;
+const current_temperature = document.querySelector("#current_temperature")as HTMLParagraphElement;
 const button = document.querySelector("#button")as HTMLButtonElement;
 button.addEventListener("click", askWeather);
 function askWeather() {
 
     if (!navigator.geolocation) {
-        progress_status.textContent = "Geolocation nicht unterstützt";
+        process_status.textContent = "Geolocation not supported";
     } else {
-        progress_status.textContent = "Suche...";
+        process_status.textContent = "Searching...";
         navigator.geolocation.getCurrentPosition(success, error);
     }
     function success(position:GeolocationPosition) {
@@ -21,13 +21,13 @@ function askWeather() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 const data = xhr.response;
                 console.log(data);
-                temperatur.textContent = "Aktuell: " + data.current_weather.temperature + " Grad Celcius";
+                current_temperature.textContent = "Current: " + data.current_weather.temperature + " Degrees Celsius";
             } else {
                 console.log(`Error: ${xhr.status}`);
             }
         };
     }
     function error() {
-        progress_status.textContent = "Position nicht auffindbar";
+        process_status.textContent = "Position not found";
     }
 }
