@@ -87,7 +87,6 @@ function weathercode_explanation(weathercode:number) {
         case(99):
             return "Thunderstorm with heavy hail";
     }
-
 }
 export function current_weathercode_function() {
     current_weathercode.textContent = "Current weathercode: " + data.current_weather.weathercode + " (" + weathercode_explanation(data.current_weather.weathercode) + ")";
