@@ -54,7 +54,7 @@ div {
     background-color: white;
     font-family: sans-serif;
     color: black;
-    margin: auto auto 10px;
+    margin: auto auto 10px auto;
     height: 40px;
     width: 200px;
 }
