@@ -4,91 +4,91 @@ import {current_weathercode} from "./dom_utils";
 function weathercode_explanation(weathercode:number) {
     switch(weathercode) {
         case(0):
-            return "Clear sky";
+            return "Klarer Himmel";
 
         case(1):
-            return "Mainly clear";
+            return "Überwiegend klar";
 
         case(2):
-            return "Partly cloudy";
+            return "Teilweise bewölkt";
 
         case(3):
-            return "Overcast";
+            return "Bewölkt";
 
         case(45):
-            return "Fog";
+            return "Nebel";
 
         case(48):
-            return "Depositing rime fog";
+            return "Ablagerung von Reifnebel";
 
         case(51):
-            return "Light drizzle";
+            return "Leichter Nieselregen";
 
         case(53):
-            return "Moderate drizzle";
+            return "Mäßiger Nieselregen";
 
         case(55):
-            return "Dense drizzle";
+            return "Dichter Nieselregen";
 
         case(56):
-            return "Light freezing drizzle";
+            return "Leichter gefrierender Nieselregen";
 
         case(57):
-            return "Dense freezing drizzle";
+            return "Dichter gefrierender Nieselregen";
 
         case(61):
-            return "Slight rain";
+            return "Leichter Regen";
 
         case(63):
-            return "Moderate rain";
+            return "Mäßiger Regen";
 
         case(65):
-            return "Heavy rain";
+            return "Starker Regen";
 
         case(66):
-            return "Light freezing rain";
+            return "Leichter gefrierender Regen";
 
         case(67):
-            return "Heavy freezing rain";
+            return "Starker gefrierender Regen";
 
         case(71):
-            return "Slight snow fall";
+            return "Leichter Schneefall";
 
         case(73):
-            return "Moderate snow fall";
+            return "Mäßiger Schneefall";
 
         case(75):
-            return "Heavy snow fall";
+            return "Starker Schneefall";
 
         case(77):
-            return "Snow grains";
+            return "Schneekörner";
 
         case(80):
-            return "Slight rain showers";
+            return "Leichte Regenschauer";
 
         case(81):
-            return "Moderate rain showers";
+            return "Mäßige Regenschauer";
 
         case(82):
-            return "Violent rain showers";
+            return "Heftige Regenschauer";
 
         case(85):
-            return "Slight snow showers";
+            return "Leichte Schneeschauer";
 
         case(86):
-            return "Heavy snow showers";
+            return "Starke Schneeschauer";
 
         case(95):
-            return "Slight or moderate thunderstorm";
+            return "Leichtes oder mäßiges Gewitter";
 
         case(96):
-            return "Thunderstorm with slight hail";
+            return "Gewitter mit leichtem Hagel";
 
         case(99):
-            return "Thunderstorm with heavy hail";
+            return "Gewitter mit schwerem Hagel";
     }
 }
 export function current_weathercode_function() {
-    current_weathercode.textContent = "Current weathercode: " + data.current_weather.weathercode + " (" + weathercode_explanation(data.current_weather.weathercode) + ")";
+    current_weathercode.textContent = "Aktueller Wettercode: " + data.current_weather.weathercode + " (" + weathercode_explanation(data.current_weather.weathercode) + ")";
     console.log("weathercode");
 }

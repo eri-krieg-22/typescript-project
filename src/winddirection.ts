@@ -4,43 +4,43 @@ import {current_winddirection} from "./dom_utils";
 function winddirection_explanation(winddirection:number){
     if (winddirection >= 337.5)
     {
-        return "North";
+        return "Nördlich";
     }
     else if (winddirection >= 292.5)
     {
-        return "Northwest";
+        return "Nordwestlich";
     }
     else if (winddirection >= 247.5)
     {
-        return "West";
+        return "Westlich";
     }
     else if (winddirection >= 202.5)
     {
-        return "Southwest";
+        return "Südwestich";
     }
     else if (winddirection >= 157.5)
     {
-        return "South";
+        return "Südlich";
     }
     else if (winddirection >= 112.5)
     {
-        return "Southeast";
+        return "Südöstlich";
     }
     else if (winddirection >= 67.5)
     {
-        return "East";
+        return "Östlich";
     }
     else if (winddirection >= 22.5)
     {
-        return "Northeast";
+        return "Nordöstlich";
     }
     else if (winddirection >= 0)
     {
-        return "North";
+        return "Nördlich";
     }
 }
 
 export function current_winddirection_function() {
-    current_winddirection.textContent = "Current winddirection: " + data.current_weather.winddirection + " Degrees" + " (" + winddirection_explanation(data.current_weather.winddirection) + ")";
+    current_winddirection.textContent = "Aktuelle Windrichtung: " + data.current_weather.winddirection + "°" + " (" + winddirection_explanation(data.current_weather.winddirection) + ")";
     console.log("winddirection");
 }
