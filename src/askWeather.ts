@@ -10,6 +10,7 @@ import {current_temperature_function} from "./temperature";
 import {current_winddirection_function} from "./winddirection";
 import {current_windspeed_function} from "./windspeed";
 import {current_weathercode_function} from "./weathercode";
+import {reverse_geocoding_function} from "./reverse_geocoding";
 
 export let data:any|null=null;
 export function askWeather() {
@@ -38,6 +39,7 @@ export function askWeather() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 data = xhr.response;
                 console.log(data);
+                reverse_geocoding_function();
                 current_temperature_function();
                 current_winddirection_function();
                 current_windspeed_function();
