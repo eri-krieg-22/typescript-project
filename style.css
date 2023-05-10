@@ -3,6 +3,8 @@ body {
 }
 
 #button {
+    font-family: sans-serif;
+    color: black;
     margin: auto;
     position: absolute;
     top: 0;
@@ -13,7 +15,8 @@ body {
     width: 200px;
 }
 
-.return {
+div {
+    font-family: sans-serif;
     color: black;
     text-align: center;
 }
