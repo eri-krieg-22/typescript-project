@@ -21,9 +21,9 @@ export function askWeather() {
     current_windspeed.textContent = "";
     current_winddirection.textContent = "";
     current_weathercode.textContent = "";
-    button.style.visibility = "hidden";
-    refresh.style.visibility = "hidden";
-    div.style.visibility = "visible";
+    button.style.display = "none";
+    refresh.style.display = "none";
+    div.style.display = "initial";
 
     if (!navigator.geolocation) {
         process_status.textContent = "Geolocation API nicht unterstützt";
@@ -49,7 +49,7 @@ export function askWeather() {
                 current_winddirection_function();
                 current_windspeed_function();
                 current_weathercode_function();
-                refresh.style.visibility = "visible";
+                refresh.style.display = "initial";
                 console.log("index");
             } else {
                 console.log(`Fehler: ${xhr.status}`);

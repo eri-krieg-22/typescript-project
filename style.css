@@ -31,7 +31,7 @@ div {
     left: 0;
     bottom: 0;
     right: 0;
-    visibility: hidden;
+    display: none;
     font-family: sans-serif;
     color: black;
     text-align: center;
