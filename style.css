@@ -3,6 +3,10 @@ body {
 }
 
 #button {
+    border-color: black;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: white;
     font-family: sans-serif;
     color: black;
     margin: auto;
@@ -15,8 +19,22 @@ body {
     width: 200px;
 }
 
+#button:hover {
+    border-color: white;
+    background-color: black;
+    color: white;
+}
+
 div {
     font-family: sans-serif;
     color: black;
     text-align: center;
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 6px;
 }
