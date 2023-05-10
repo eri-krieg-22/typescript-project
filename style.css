@@ -26,16 +26,41 @@ body {
 }
 
 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     visibility: hidden;
     font-family: sans-serif;
     color: black;
     text-align: center;
     background-color: white;
     width: fit-content;
+    height: fit-content;
     margin: auto;
     padding-left: 10px;
     padding-right: 10px;
     border-style: solid;
     border-color: black;
     border-radius: 6px;
+}
+
+#refresh
+{
+    border-color: black;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
+    margin: auto auto 10px;
+    height: 40px;
+    width: 200px;
+}
+
+#refresh:hover {
+    border-color: white;
+    background-color: black;
+    color: white;
 }

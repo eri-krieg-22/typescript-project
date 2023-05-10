@@ -9,6 +9,8 @@ const div = document.querySelector("#div")as HTMLDivElement;
 
 const reverse_geocoding = document.querySelector("#reverse_geocoding")as HTMLParagraphElement;
 
+const refresh = document.querySelector("#refresh")as HTMLButtonElement;
+
 export {
     process_status,
     current_temperature,
@@ -17,5 +19,6 @@ export {
     current_weathercode,
     button,
     div,
-    reverse_geocoding
+    reverse_geocoding,
+    refresh
 }

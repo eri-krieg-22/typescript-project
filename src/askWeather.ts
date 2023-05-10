@@ -4,7 +4,9 @@ import {
     current_winddirection,
     current_windspeed,
     process_status,
-    div
+    button,
+    div,
+    refresh, reverse_geocoding
 } from "./dom_utils";
 import {current_temperature_function} from "./temperature";
 import {current_winddirection_function} from "./winddirection";
@@ -14,11 +16,14 @@ import {reverse_geocoding_function} from "./reverse_geocoding";
 
 export let data:any|null=null;
 export function askWeather() {
-    current_temperature.textContent = ""
-    current_windspeed.textContent = ""
-    current_winddirection.textContent = ""
-    current_weathercode.textContent = ""
-    div.style.visibility = "visible"
+    reverse_geocoding.textContent = "";
+    current_temperature.textContent = "";
+    current_windspeed.textContent = "";
+    current_winddirection.textContent = "";
+    current_weathercode.textContent = "";
+    button.style.visibility = "hidden";
+    refresh.style.visibility = "hidden";
+    div.style.visibility = "visible";
 
     if (!navigator.geolocation) {
         process_status.textContent = "Geolocation API nicht unterstützt";
@@ -44,7 +49,8 @@ export function askWeather() {
                 current_winddirection_function();
                 current_windspeed_function();
                 current_weathercode_function();
-                console.log("index")
+                refresh.style.visibility = "visible";
+                console.log("index");
             } else {
                 console.log(`Fehler: ${xhr.status}`);
             }
