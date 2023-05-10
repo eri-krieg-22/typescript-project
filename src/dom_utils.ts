@@ -5,11 +5,14 @@ const current_winddirection = document.querySelector("#current_winddirection")as
 const current_weathercode = document.querySelector("#current_weathercode")as HTMLParagraphElement;
 const button = document.querySelector("#button")as HTMLButtonElement;
 
+const div = document.querySelector("#div")as HTMLDivElement;
+
 export {
     process_status,
     current_temperature,
     current_windspeed,
     current_winddirection,
     current_weathercode,
-    button
+    button,
+    div
 }

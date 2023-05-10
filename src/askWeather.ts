@@ -3,7 +3,8 @@ import {
     current_weathercode,
     current_winddirection,
     current_windspeed,
-    process_status
+    process_status,
+    div
 } from "./dom_utils";
 import {current_temperature_function} from "./temperature";
 import {current_winddirection_function} from "./winddirection";
@@ -16,6 +17,7 @@ export function askWeather() {
     current_windspeed.textContent = ""
     current_winddirection.textContent = ""
     current_weathercode.textContent = ""
+    div.style.visibility = "visible"
 
     if (!navigator.geolocation) {
         process_status.textContent = "Geolocation API nicht unterstützt";
