@@ -22,7 +22,6 @@ export function askWeatherElsewhere() {
     current_windspeed.textContent = "";
     current_winddirection.textContent = "";
     current_weathercode.textContent = "";
-    search_refresh.style.display = "none";
     refresh.style.display = "none";
     button.style.display = "initial";
     div.style.display = "initial";
