@@ -15,7 +15,7 @@ body {
     color: black;
     margin: auto;
     height: 40px;
-    width: 220px;
+    width: 250px;
 }
 
 #search_button {
@@ -27,7 +27,7 @@ body {
     color: black;
     margin: auto;
     height: 40px;
-    width: 220px;
+    width: 250px;
 }
 
 #button:hover {
@@ -41,8 +41,11 @@ body {
     background-color: black;
     color: white;
 }
+#divButtons {
+    display:inline-block;
+}
 
-div {
+#div {
     position: absolute;
     top: 0;
     left: 0;
@@ -73,7 +76,7 @@ div {
     color: black;
     margin: auto auto 10px auto;
     height: 40px;
-    width: 200px;
+    width: 250px;
     display: none;
 }
 
@@ -87,7 +90,7 @@ div {
     color: black;
     margin: auto auto 10px auto;
     height: 40px;
-    width: 200px;
+    width: 250px;
     display: none;
 }
 
