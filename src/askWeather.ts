@@ -5,7 +5,7 @@ import {
     current_windspeed,
     process_status,
     button,
-    div,
+    div, search_refresh,
     refresh, reverse_geocoding
 } from "./dom_utils";
 import {current_temperature_function} from "./temperature";
@@ -22,7 +22,7 @@ export function askWeather() {
     current_winddirection.textContent = "";
     current_weathercode.textContent = "";
     button.style.display = "none";
-    refresh.style.display = "none";
+    search_refresh.style.display = "none";
     div.style.display = "initial";
 
     if (!navigator.geolocation) {
@@ -37,7 +37,7 @@ export function askWeather() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.open-meteo.com/v1/forecast?latitude=" + latitude + "&longitude=" + longitude + "&current_weather=true&daily=temperature_2m_max&daily=temperature_2m_min&timezone=auto");
+        xhr.open("GET", "https://api.open-meteo.com/v1/forecast?latitude=" + latitude + "&longitude=" + longitude + "&current_weather=true");
         xhr.send();
         xhr.responseType = "json";
         xhr.onload = () => {

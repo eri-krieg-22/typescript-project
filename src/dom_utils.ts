@@ -11,6 +11,12 @@ const reverse_geocoding = document.querySelector("#reverse_geocoding")as HTMLPar
 
 const refresh = document.querySelector("#refresh")as HTMLButtonElement;
 
+const search_button = document.querySelector("#search_button")as HTMLButtonElement;
+
+const query = document.querySelector("#query") as HTMLInputElement;
+
+const search_refresh = document.querySelector("#search_refresh")as HTMLButtonElement;
+
 export {
     process_status,
     current_temperature,
@@ -20,5 +26,8 @@ export {
     button,
     div,
     reverse_geocoding,
-    refresh
+    refresh,
+    search_button,
+    query,
+    search_refresh
 }

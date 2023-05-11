@@ -1,5 +1,6 @@
 import {data} from './askWeather';
 import {current_weathercode} from "./dom_utils";
+import {search_weatherdata} from "./askWeatherElsewhere";
 
 function weathercode_explanation(weathercode:number) {
     switch(weathercode) {
@@ -90,5 +91,9 @@ function weathercode_explanation(weathercode:number) {
 }
 export function current_weathercode_function() {
     current_weathercode.textContent = "Aktueller Wettercode: " + data.current_weather.weathercode + " (" + weathercode_explanation(data.current_weather.weathercode) + ")";
+    console.log("weathercode");
+}
+export function search_weathercode_function() {
+    current_weathercode.textContent = "Aktueller Wettercode: " + search_weatherdata.current_weather.weathercode + " (" + weathercode_explanation(search_weatherdata.current_weather.weathercode) + ")";
     console.log("weathercode");
 }

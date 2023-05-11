@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
-        <button type="button" id="button">Wie ist das aktuelle Wetter?</button>
+    <label for="query"></label><input type="text" id="query" class="form-control" placeholder="Wie ist das Wetter anderswo?">
+            <button type="button" id="search_button">Suche</button>
+        <button type="button" id="button">Wie ist das aktuelle Wetter bei mir?</button>
+        <button type="button" id="refresh">Lokales Wetter aktualisieren</button>
+        <button type="button" id="search_refresh">Gesuchtes Wetter aktualisieren</button>
         <div id="div">
             <p id="process_status"></p>
             <p id="reverse_geocoding"></p>
@@ -16,7 +20,7 @@
             <p id="current_windspeed"></p>
             <p id="current_winddirection"></p>
             <p id="current_weathercode"></p>
-            <button type="button" id="refresh">Aktualisieren</button>
+
         </div>
     </body>
 </html>

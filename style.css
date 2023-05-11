@@ -1,5 +1,9 @@
 body {
     background-color: lightblue;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 10%;
+    text-align: center;
 }
 
 #button {
@@ -10,16 +14,29 @@ body {
     font-family: sans-serif;
     color: black;
     margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     height: 40px;
-    width: 200px;
+    width: 220px;
+}
+
+#search_button {
+    border-color: black;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
+    margin: auto;
+    height: 40px;
+    width: 220px;
 }
 
 #button:hover {
+    border-color: white;
+    background-color: black;
+    color: white;
+}
+
+#search_button:hover {
     border-color: white;
     background-color: black;
     color: white;
@@ -57,10 +74,42 @@ div {
     margin: auto auto 10px auto;
     height: 40px;
     width: 200px;
+    display: none;
+}
+
+#search_refresh
+{
+    border-color: black;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
+    margin: auto auto 10px auto;
+    height: 40px;
+    width: 200px;
+    display: none;
+}
+
+#search_refresh:hover {
+    border-color: white;
+    background-color: black;
+    color: white;
 }
 
 #refresh:hover {
     border-color: white;
     background-color: black;
     color: white;
+}
+
+#query {
+    border-color: black;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: white;
+    font-family: sans-serif;
+    color: black;
+    height: 40px;
+    width: 500px;
 }
